@@ -51,7 +51,7 @@
     </nav>
 
     <div class="container">
-		<div class="col-md-12">
+		<div class="col-md-8">
 			<div class="main-col">
 				<div class="block">
 					<h1 class="pull-left">Welcome to TalkingSpace</h1>

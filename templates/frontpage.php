@@ -76,5 +76,20 @@
 										<a href="category.html">Development</a> >> <a href="profile.html">BradT81</a> >> Posted on: June 12, 2014 
 										<span class="badge pull-right">4</span>
 									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					</ul>
+					<h3>Forum Statistics</h3>
+					<ul>
+					<li>Total Number of Users: <strong>52</strong>
+					<li>Total Number of Topics: <strong>10</strong>
+					<li>Total Number of Categories: <strong>5</strong>
+					
+					
+					
+					</ul>
+					
 <?php include 'includes/footer.php';?>
-								
+				
