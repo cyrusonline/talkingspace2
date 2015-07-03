@@ -1,4 +1,6 @@
 <?php include 'includes/header.php';?>
+					
+					<ul id="topics">
 					<li class="topic">
 							<div class="row">
 							<div class="col-md-2">
@@ -15,7 +17,6 @@
 							</div>
 						</div>
 					</li>
-					<ul id="topic">
 					<li class="topic">
 						<div class="row">
 							<div class="col-md-2">

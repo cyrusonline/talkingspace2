@@ -1,4 +1,4 @@
-<?php
+
 
 <?php
 class Database {
@@ -94,3 +94,6 @@ class Database {
 	public function cancelTransaction(){
 		return $this->dbh->rollBack();
 	}
+	
+}
+	?>
