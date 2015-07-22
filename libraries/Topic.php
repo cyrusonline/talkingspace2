@@ -85,6 +85,63 @@ class Topic{
 	}
 	
 	/*
+	 * Get Topic By ID
+	 */
+	
+	public function getTopic($id){
+		$this->db->query("SELECT topics.*, users.username, users.name, users.avatar FROM topics
+						INNER JOIN users
+						ON topics.user_id = users.id
+						WHERE topics.id = :id	
+				
+				");
+		/*
+		 * "SELECT topics.*, users.username, users.name, users.avatar FROM topics
+						INNER JOIN users
+						ON topics.user_id = users.id
+						WHERE topics.id=:id
+		 */
+		
+		$this->db->bind(':id', $id);
+		
+		//Assign row
+		$row = $this->db->single();
+		return $row;
+		
+	}
+	
+	
+	/*
+	 * Get Topic Replies
+	 */
+	
+	public function getReplies($topic_id){
+		$this->db->query("SELECT replies.*, users.* FROM replies
+						INNER JOIN users
+						ON replies.user_id = users.id
+						WHERE replies.topic_id = :topic_id 
+						ORDER BY create_date ASC	
+	
+				");
+		
+		/*
+		 * SELECT replies.*, users.* FROM replies
+						INNER JOIN users
+						ON replies.user_id = users.id
+						WHERE topics.id=:topic_id
+						ORDER BY create_date ASC
+		 */
+	
+		$this->db->bind(':topic_id', $topic_id);
+	
+		//Assign row
+		$results = $this->db->resultset();
+		return $results;
+	
+	}
+	
+	
+	/*
 	 * Get Topics By Category
 	 */
 	public function getByCategory($category_id){
