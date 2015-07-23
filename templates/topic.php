@@ -1,18 +1,14 @@
 <?php include 'includes/header.php';?>
-<h1 class="pull-left">How did you learn CSS and HTML?</h1>
-					<h4 class="pull-right">A simple PHP forum engine</h4>
-					<div class="clearfix"></div>
-					<hr>
 					<ul id="topics">
 						<li id="main-topic" class="topic topic">
 							<div class="row">
 								<div class="col-md-2">
 									<div class="user-info">
-										<img class="avatar pull-left" src="img/gravatar.jpg" />
+										<img class="avatar pull-left" src="<?php echo BASE_URI;?>images/avatars/avatar1.jpg" />
 										<ul>
-											<li><strong>BradT81</strong></li>
-											<li>43 Posts</li>
-											<li><a href="profile.php">Profile</a>
+											<li><strong><?php echo $topic->username;?></strong></li>
+											<li><?php echo userPostCount($topic->user_id);?>Posts</li>
+											<li><a href="<?php echo BASE_URI;?>topics.php?user=<?php echo $topic->user_id;?>">Profile</a>
 										</ul>
 									</div>
 								</div>
@@ -26,11 +22,12 @@
 								</div>
 							</div>
 						</li>
+						
 						<li class="topic topic">
 							<div class="row">
 								<div class="col-md-2">
 									<div class="user-info">
-										<img class="avatar pull-left" src="img/gravatar.jpg" />
+										<img class="avatar pull-left" src="<?php echo BASE_URI;?>images/avatars/<?php echo $reply->avatar;?>" />
 										<ul>
 											<li><strong>BradT81</strong></li>
 											<li>43 Posts</li>
