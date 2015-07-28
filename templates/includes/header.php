@@ -25,6 +25,19 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+  <?php 
+  if(!isset($title)){
+  	$title = SITE_TITLE;
+  	
+  }
+  
+  
+  
+  ?>
+  
+  
+  
+  
   </head>
 
   <body>
@@ -54,7 +67,8 @@
 		<div class="col-md-8">
 			<div class="main-col">
 				<div class="block">
-					<h1 class="pull-left">Welcome to TalkingSpace</h1>
+					<h1 class="pull-left"><?php echo $title;?></h1>
 					<h4 class="pull-right">A simple PHP forum engine</h4>				
 					<div class="clearfix"></div>
 					<hr>
+					<?php displayMessage();?>

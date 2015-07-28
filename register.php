@@ -5,6 +5,8 @@
 $topic = new Topic();
 //Create User Object
 $user = new User();
+//Create Validate Object
+$validate = new Validator();
 
 
 if (isset($_POST['register'])) {
@@ -20,6 +22,8 @@ if (isset($_POST['register'])) {
 	$data['last_activity']=date("Y-m-d H:i:s");
 	
 	//Upload Avatar Image
+	
+	/*
 	if ($user->uploadAvatar()) {
 		
 		$data['avatar']=$_FILES["avatar"]["name"];
@@ -28,6 +32,14 @@ if (isset($_POST['register'])) {
 		$data['avatar'] = 'noimage.png';
 	}
 	
+	//Register
+	if($user->register($data)){
+		redirect('index.php','You are registered and can now login','success');
+	}else {
+		redirect('index.php','YSomething went wrong with registration','error');
+		
+	}
+	*/
 }
 //Get Template and Assign vars
 $template = new Template('templates/register.php');

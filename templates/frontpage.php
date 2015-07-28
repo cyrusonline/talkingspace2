@@ -5,12 +5,12 @@
 	<li class="topic">
 		<div class="row">
 			<div class="col-md-2">
-				<img class="avatar pull-left" src="img/<?php echo $topic->avatar;?>" />
+				<img class="avatar pull-left" src="images/avatars/<?php echo $topic->avatar;?>" />
 			</div>
 			<div class="col-md-10">
 				<div class="topic-content pull-right">
 					<h3>
-						<a href="topic.html"><?php echo $topic->title;?></a>
+						<a href="topic.php?id=<?php echo $topic->id;?>"><?php echo $topic->title;?></a>
 					</h3>
 					<div class="topic-info">
 						<a href="topics.php?category=<?php echo urlFormat($topic->category_id);?>"><?php echo $topic->name;?></a> >><a href="topics.php?user=<?php echo urlFormat($topic->user_id);?>"><?php echo $topic->username;?></a>>>
@@ -31,9 +31,9 @@
 <ul>
 	<li>Total Number of Users: <strong>52</strong>
 	
-	<li>Total Number of Topics: <strong>10</strong>
+	<li>Total Number of Topics: <strong><?php echo $totalTopics;?></strong>
 	
-	<li>Total Number of Categories: <strong>5</strong>
+	<li>Total Number of Categories: <strong><?php echo $totalCategories;?></strong>
 
 </ul>
 
